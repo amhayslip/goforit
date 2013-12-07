@@ -4,3 +4,7 @@
 <%= @goal.deadline %>
 <%= @goal.description %>
 <img src="<%= @goal.goal_pic %>">
+
+<% @goal.partners.each do |partner| %>
+	<%= partner.full_name %>
+<% end %>
