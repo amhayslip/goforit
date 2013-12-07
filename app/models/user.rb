@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :goals
-  has_many :partners, through :goals
+  has_many :partners
 
   validates :first_name, :last_name, :email_address, :description, presence: true
+
+  def full_name
+  	"#{first_name} #{last_name}"
+  end
 end
