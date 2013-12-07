@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20131207193543) do
     t.string   "goal_pic"
   end
 
+  create_table "partners", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email_address"
+    t.string   "phone_number"
+    t.integer  "goal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", force: true do |t|
     t.string   "name"
     t.integer  "resource_id"
