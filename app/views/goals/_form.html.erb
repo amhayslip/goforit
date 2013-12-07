@@ -1,0 +1,16 @@
+<%= form_for @goal do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %> <br />
+
+<%= f.label :deadline %>
+<%= f.text_field :deadline %> <br />
+
+<%= f.label :description %>
+<%= f.text_field :description %> <br />
+
+<%= f.label :goal_pic %>
+<%= f.text_field :goal_pic %> <br />
+
+<%= f.submit %>
+<% end %>
