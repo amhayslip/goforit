@@ -44,11 +44,13 @@ section {
   }
 
 * {
-border: 1px solid red;
+  border: 1px solid red;
 -moz-box-sizing: border-box;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
+
+
 
 
 
@@ -82,7 +84,7 @@ color:#575656;
 color:#575656;
 }
 .logo a:hover {
-color:#7AC9C3;
+color:#759B84;
 }
 
 
@@ -112,6 +114,17 @@ background-size: cover;
 a.links {
   color: #759B84;
 }
+
+links a:hover {
+color:#575656;
+}
+
+
+.hm {
+  border: 1px solid black;
+}
+
+
 
 
 
