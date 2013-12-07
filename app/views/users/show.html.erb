@@ -1,3 +1,11 @@
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<h3> Goooooooaaal </h3>
+<% @user.goals.each do |goal| %>
+	<%= goal.title %>
+	<%= goal.description %>
+	<img src="<%= goal.goal_pic %>">
+	<%= goal.deadline %>
+	<%= goal.user_id %>
+<% end %>
