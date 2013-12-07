@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+railsclass UsersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
