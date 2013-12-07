@@ -34,7 +34,6 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
@@ -43,3 +42,104 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+* {
+border: 1px solid red;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+
+
+//////////////// Nav Styles //////////////////////
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #575656;
+}
+
+
+
+
+
+//////////////// Body Styles /////////////////////
+
+.logo {
+ text-align: center;
+ font-family: corki;
+ font-size: 2.5em;
+ color: #575656;
+ text-decoration: none;
+}
+.logo a:link {
+color:#575656;
+}
+.logo a:visited {
+color:#575656;
+}
+.logo a:active {
+color:#575656;
+}
+.logo a:hover {
+color:#7AC9C3;
+}
+
+
+.tagline {
+  text-align: center;
+  font-family: corki;
+  color: #575656
+}
+
+.navback {
+  background-color: transparent;
+  opacity: 3;
+}
+
+body {
+  background: url(back.jpg) no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.feat {
+  color: #575656
+}
+
+a.links {
+  color: #759B84;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
