@@ -21,21 +21,24 @@ class GoalsController < ApplicationController
 	def create
 		@goal = Goal.new(goal_params)
 		# Assign user id to new goal
+		user = User.find(@goal.user_id)
 		@goal.user_id = params[:user_id]
 		@goal.save
-		redirect_to user_path(goal_params[:user_id])
+		redirect_to user_path(user.id)
 	end
 
 
 
 	def edit
 		@goal = Goal.find(params[:id])
+		@goal.user_id = params[:user_id]
 	end
 	
 	def update
 		@goal = Goal.find(params[:id])
+		user = User.find(@goal.user_id)
 		@goal.update(goal_params)
-		redirect_to user_path(goal_params[:user_id])
+		redirect_to user_path(user.id)
 	end
 	
 	def destroy

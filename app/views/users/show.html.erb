@@ -2,7 +2,8 @@
 	<article class="container usershow">
 	    <div class="row">
 	    	<div class="col-lg-3">
-	    		User Pic
+	    		
+	    		<%= @user.profile_pic %>
 	    	</div>
 	        <div class="col-lg-3">
 	        	<div class="userinfo"
@@ -20,6 +21,8 @@
 			<div class="row">
 				<h2 class="goalhead"> <%= @user.name %>'s Goals</h2>
 				<h5 class="goalnew"> <%= link_to 'New Goal', new_user_goal_path(@user) %> </h5>
+				<h5 class="goalnew"> <%= link_to 'View All Partners', user_partners_path(@user) %> </h5>
+
 			</div>
 			<div class="row">
 				<% @user.goals.each do |goal| %>

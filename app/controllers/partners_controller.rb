@@ -5,7 +5,7 @@ class PartnersController < ApplicationController
 
 	def index
 		@partners = Partner.all
-
+		@user = User.find(params[:user_id])
 	end
 
 	def new
@@ -47,8 +47,8 @@ class PartnersController < ApplicationController
 	end
 
   def twilio_send_text(body, to)
-  	account_sid = "AC8eb3d192129a3656989cae038db8c198"
-  	auth_token = "443896e569a945af7bf5a73e2ea0f966"
+  	account_sid = ENV['TWILIO_SID']  	
+  	auth_token = ENV['TWILIO_TOKEN']
 	  client = Twilio::REST::Client.new account_sid, auth_token
 
 	  client.account.sms.messages.create(

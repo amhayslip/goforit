@@ -15,8 +15,8 @@
           <div class="col-sm-6">
           		<p class="goaldead"> Goal Deadline: <%= @goal.deadline %> </p>
           		<p class="goaldead"> <%= @goal.description %> </p>
-          		<% @goal.partners.each do |partner| %>
-					<p class="goaldead"> Partners: <%= partner.full_name%> </p>
+          		<h4>Partners: </h4><% @goal.partners.each do |partner| %>
+					<p class="goaldead"><%= partner.full_name%> </p>
 				<% end %>
 		 <div class="col-sm-0">
          </div>
@@ -26,7 +26,7 @@
   </div>
 
 
-<p class="editgoal"> <%= link_to 'Edit Goal', edit_goal_path(params[:id]) %> </p<
+<p class="editgoal"> <%= link_to 'Edit Goal', edit_goal_path(params[:id]) %> | <%= link_to 'Add Partner', new_partner_path %> </p>
 
 
 </article>
