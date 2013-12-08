@@ -15,9 +15,10 @@
 <%= f.label :frequency %>
 <%= f.text_field :frequency %> <br />
 
-<%= f.label :goal_id %>
-<%= f.text_field :goal_id %> <br />
 
+<%= f.label :goal_id %>
+<%= select("partner", "goal_id", @goals.collect {|p| [ p.title, p.id ]}, {include_blank: 'None'}) %>
 
 <%= f.submit %>
 <% end %>
+
