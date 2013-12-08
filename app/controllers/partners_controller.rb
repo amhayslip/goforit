@@ -19,30 +19,31 @@ class PartnersController < ApplicationController
 		partner_phone_number = @partner.phone_number
 		twilio_send_text("Welcome to GoForIt! Thank you for being an accountability partner, #{@partner.first_name}.", partner_phone_number)
 		if @partner.save
-			redirect_to partners_path, :notice => "Partner created."
+			redirect_to user_partners_path(:user_id), :notice => "Partner created."
 		else
-			redirect_to partners_path, :notice => "Unable to create new partner."
+			redirect_to user_partners_path(:user_id), :notice => "Unable to create new partner."
 		end
 	end
 
 	def edit
 		@partner = Partner.find(params[:id])
+		@goals = Goal.all
 	end
 
 	def update
 		@partner = Partner.find(params[:id])
 		@partner.update(partner_params)
 		if @partner
-		  redirect_to partners_path, :notice => "Partner updated."
+		  redirect_to user_partners_path(:user_id), :notice => "Partner updated."
 		else
-		  redirect_to partners_path, :alert => "Unable to update partner."
+		  redirect_to user_partners_path(:user_id), :alert => "Unable to update partner."
 		end
 	end
 
 	def destroy
 		@partner = Partner.find(params[:id])
 		@partner.destroy
-		redirect_to partners_path
+		redirect_to user_partners_path(:user_id)
 	end
 
   def twilio_send_text(body, to)
