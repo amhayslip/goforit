@@ -1,11 +1,72 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
-<h3> Goooooooaaal </h3>
-<% @user.goals.each do |goal| %>
-	<%= goal.title %>
-	<%= goal.description %>
-	<img src="<%= goal.goal_pic %>">
-	<%= goal.deadline %>
-	<%= goal.user_id %>
-<% end %>
+
+<article class="container usershow">
+    <div class="row">
+        <div class="col-sm-3 email">
+        </div>
+        <div class="col-lg-6">
+        	<div class="userinfo"
+				  <h1 class="username"> <span class="username"> <%= @user.name %> </span></h1>
+		          <p class="email"> <span class="email"> Email: <%= @user.email if @user.email %> </span> </p>
+	        </div>
+        </div>
+        <div class="col-sm-3">
+        </div>
+    </div>
+</article>
+
+<article class="container featured users">
+	<div class="row">
+		<h2 class="goalhead">Goals</h2>
+	</div>
+	<div class="row">
+		<% @user.goals.each do |goal| %>
+		<div class="col-sm-3 goals">
+				<div class="goalbox">
+					<div class="goaltitle"
+						<h2> <%= goal.title %> </h2>
+					</div>
+					<div class="goaldes"
+						<p class="des"> <%= goal.description %> </p>
+						<p> Deadline: <%= goal.deadline %> </p>
+					</div>
+						<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
+				</div>
+		</div> 
+		<% end %>	
+	</div>	
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

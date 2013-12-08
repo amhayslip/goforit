@@ -33,7 +33,7 @@ module Goforit
     # config.i18n.default_locale = :de
 
     console do 
-      hirb.enbale
+      Hirb.enable
     end
   end
 end

@@ -43,6 +43,7 @@ section {
   margin-top: 20px;
   }
 
+
 * {
   border: 1px solid red;
 -moz-box-sizing: border-box;
@@ -89,6 +90,7 @@ color:#759B84;
 
 
 .tagline {
+  margin-top: -13px;
   text-align: center;
   font-family: corki;
   color: #575656
@@ -99,12 +101,13 @@ color:#759B84;
   opacity: 3;
 }
 
-body {
-  background: url(back.jpg) no-repeat center center; 
+.back {
+background: url(back.jpg) no-repeat center center;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover;
+background-size: cover; 
+  
 }
 
 .feat {
@@ -123,6 +126,73 @@ color:#575656;
 .hm {
   border: 1px solid black;
 }
+
+.mission {
+  background-color: #EAEBE7;
+  margin-top: 350px;
+}
+
+.statement {
+  font-family: corki;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+///////////////// Goals /////////////////////
+
+.goals {
+  height: 300px;
+  display:table;
+  color: #575656
+}
+.goalhead {
+   text-align: center;
+  font-size: 4em;
+  font-family: corki;
+  margin-left: 5px;
+}
+
+.goalbox {
+  padding: 10px;
+  height: 350px;
+  background-color: #EAEBE7;
+}
+
+.goaltitle {
+  height: 100px;
+  font-family: corki;
+  font-size: 2em;
+  text-align: left;
+}
+
+.goaldes {
+  height: 100px;
+}
+
+//////////////// Users //////////////////////
+
+.username {
+  font-family: corki;
+  text-align: left;
+  font-size: 1.9em;
+}
+
+.email {
+  text-align: left;
+  font-size: 1.2em;
+  font-family: corki
+}
+
+.userinfo {
+  background-color: #EAEBE7;
+  height: 180px;
+  padding: 10px
+}
+
+
+
+
+
 
 
 
