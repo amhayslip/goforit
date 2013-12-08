@@ -1,3 +1,5 @@
+<!-- users/8/goals/1 -->
+
 <h1>Show a goal</h1>
 
 <%= @goal.title %>
@@ -5,6 +7,15 @@
 <%= @goal.description %>
 <img src="<%= @goal.goal_pic %>">
 
+
+<%= @goal.user.name %>
+
+
+
+
+
+
 <% @goal.partners.each do |partner| %>
 	<%= partner.full_name %>
 <% end %>
+

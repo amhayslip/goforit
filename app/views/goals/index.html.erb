@@ -1,0 +1,7 @@
+<!-- http://localhost:3000/users/8/goals -->
+
+Showing all goals
+
+<% @goals.each do |goal| %>
+<%= link_to goal.title, user_goals_path(goal) %>
+<% end %>

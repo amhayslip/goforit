@@ -25,12 +25,15 @@
 				<div class="goalbox">
 					<div class="goaltitle"
 						<h2> <%= goal.title %> </h2>
+						<%= link_to goal.title, goal_path(goal) %>
+
 					</div>
 					<div class="goaldes"
 						<p class="des"> <%= goal.description %> </p>
 						<p> Deadline: <%= goal.deadline %> </p>
 					</div>
 						<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
+						<%= link_to 'Edit Goal', edit_goal_path(goal) %>
 				</div>
 		</div> 
 		<% end %>	
@@ -39,48 +42,6 @@
 
 
 
+<%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
-<h3> Goooooooaaal </h3>
-<% @user.goals.each do |goal| %>
-	<%= goal.title %>
-	<%= goal.description %>
-	<img src="<%= goal.goal_pic %>">
-	<%= goal.deadline %>
-	<%= goal.user_id %>
-<% end %>
->>>>>>> 63fdc55b0671bb27eb305d66969a2fa730de52f8
