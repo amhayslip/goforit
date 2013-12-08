@@ -1,0 +1,13 @@
+
+<h3> Pawdnas </h3>
+<% @partners.each do |partner| %>
+	<%= partner.full_name %>
+	<%= partner.email_address %>
+	<%= partner.phone_number %>
+
+	<%= partner.goal.title %>
+	<br />
+<% end %>
+
+
+

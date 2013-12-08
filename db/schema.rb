@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20131207220046) do
 
   create_table "goals", force: true do |t|
@@ -23,9 +22,6 @@ ActiveRecord::Schema.define(version: 20131207220046) do
     t.text     "description"
     t.string   "goal_pic"
   end
-
-ActiveRecord::Schema.define(version: 20131207181239) do
-
 
   create_table "partners", force: true do |t|
     t.string   "first_name"

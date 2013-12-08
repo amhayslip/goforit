@@ -2,7 +2,6 @@ class PartnersController < ApplicationController
 
 	def index
 		@partners = Partner.all
-		@user = User.find(params[:id])
 	end
 
 	def new
