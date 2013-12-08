@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'twilio-ruby'
+
 class PartnersController < ApplicationController
 
 	def index
@@ -11,6 +14,8 @@ class PartnersController < ApplicationController
 	def create
 		@partner = Partner.new(partner_params)
 		@partner.save
+		partner_phone_number = @partner.phone_number
+		twilio_send_text("Welcome to GoForIt!", partner_phone_number)
 		if @partner.save
 			redirect_to partners_path, :notice => "Partner created."
 		else
@@ -36,6 +41,17 @@ class PartnersController < ApplicationController
 		@partner = Partner.find(params[:id])
 		@partner.destroy
 		redirect_to partners_path
+	end
+
+  def twilio_send_text(body, to)
+  	account_sid = "AC8eb3d192129a3656989cae038db8c198"
+  	auth_token = "443896e569a945af7bf5a73e2ea0f966"
+	  client = Twilio::REST::Client.new account_sid, auth_token
+
+	  client.account.sms.messages.create(
+	  	:body => body,
+	  	:to => to,
+	  	:from => "+15129611454")
 	end
 
 private
