@@ -54,7 +54,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    dotenv (0.9.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
@@ -66,19 +65,10 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    foreman (0.63.0)
-      dotenv (>= 0.7)
-      thor (>= 0.13.6)
     hike (1.2.3)
     hirb (0.7.1)
     hub (1.10.6)
     i18n (0.6.9)
-    iron_core (1.0.1)
-      rest (>= 2.2.0)
-    iron_worker_ng (1.0.4)
-      bundler
-      iron_core (>= 1.0.0)
-      rubyzip (= 0.9.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -95,7 +85,6 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.2)
-    net-http-persistent (2.9)
     orm_adapter (0.5.0)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
@@ -119,11 +108,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.0)
-    rest (2.6.3)
-      net-http-persistent
-      rest-client (>= 0.3.0)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rolify (3.2.0)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
@@ -136,7 +120,6 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rubyzip (0.9.9)
     sass (3.2.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -192,10 +175,8 @@ DEPENDENCIES
   devise
   factory_girl_rails
   figaro
-  foreman
   hirb
   hub
-  iron_worker_ng
   jbuilder (~> 1.2)
   jquery-rails
   quiet_assets
