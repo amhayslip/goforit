@@ -2,15 +2,14 @@
 
 <article class="container usershow">
     <div class="row">
-        <div class="col-sm-3 email">
-        </div>
-        <div class="col-lg-6">
+       
+        <div class="col-lg-12">
         	<div class="userinfo"
 				  <h1 class="username"> <span class="username"> <%= @user.name %> </span></h1>
 		          <p class="email"> <span class="email"> Email: <%= @user.email if @user.email %> </span> </p>
 	        </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-0">
         </div>
     </div>
 </article>
@@ -24,8 +23,8 @@
 		<div class="col-sm-3 goals">
 				<div class="goalbox">
 					<div class="goaltitle"
-						<h2> <%= goal.title %> </h2>
-						<%= link_to goal.title, goal_path(goal) %>
+						<h2><%= link_to goal.title, goal_path(goal) %>  </h2>
+						
 
 					</div>
 					<div class="goaldes"
@@ -33,11 +32,13 @@
 						<p> Deadline: <%= goal.deadline %> </p>
 					</div>
 						<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
-						<%= link_to 'Edit Goal', edit_goal_path(goal) %>
+						
 				</div>
+				<%= link_to 'Edit Goal', edit_goal_path(goal) %>
 		</div> 
 		<% end %>	
-	</div>	
+	</div>
+		
 </article>
 
 

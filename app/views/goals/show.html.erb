@@ -1,16 +1,44 @@
 <!-- users/8/goals/1 -->
 
-<h1>Show a goal</h1>
+ <article class="container logobox">
+     
+     	 
+     	  <div class="col-sm-12">
+     	  		<h3 class="goalproftitle"> <%= @goal.title %> </h1>
+     	  </div>
+    <div class="goalprofbox">
+     	  <div class="col-sm-0">
+          </div>
+          <div class="col-sm-6">
+          		<img class="goalprofpic" src="<%= @goal.goal_pic %>" width="350px" >
+          </div>
+          <div class="col-sm-6">
+          		<p class="goaldead"> Goal Deadline: <%= @goal.deadline %> </p>
+          		<p class="goaldead"> <%= @goal.description %> </p>
+          		<% @goal.partners.each do |partner| %>
+					<p class="goaldead"> Partners: <%= partner.full_name%> </p>
+				<% end %>
+		 <div class="col-sm-0">
+         </div>
+    </div>
 
-<%= @goal.title %>
-<%= @goal.deadline %>
-<%= @goal.description %>
-<img src="<%= @goal.goal_pic %>">
+          		
 
-
+          </div>
+         
+       </article>
 
 <% @goal.partners.each do |partner| %>
 	<%= partner.full_name %>
 <% end %>
 
+
+
+
+
+
+
 <%=link_to 'Back to Profile', new_user_session_path %>
+
+
+

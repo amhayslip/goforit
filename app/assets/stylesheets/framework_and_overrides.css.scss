@@ -44,12 +44,7 @@ section {
   }
 
 
-* {
-  border: 1px solid red;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-}
+
 
 
 
@@ -62,6 +57,10 @@ box-sizing: border-box;
   color: #575656;
 }
 
+.navbar-inverse {
+  border-color: white;
+}
+
 
 
 
@@ -72,17 +71,17 @@ box-sizing: border-box;
  text-align: center;
  font-family: corki;
  font-size: 2.5em;
- color: #575656;
+ color: white;
  text-decoration: none;
 }
 .logo a:link {
-color:#575656;
+color: #575656;
 }
 .logo a:visited {
-color:#575656;
+color: #575656;
 }
 .logo a:active {
-color:#575656;
+color: #575656;
 }
 .logo a:hover {
 color:#759B84;
@@ -93,21 +92,16 @@ color:#759B84;
   margin-top: -13px;
   text-align: center;
   font-family: corki;
-  color: #575656
+  color: #575656;
 }
 
 .navback {
-  background-color: transparent;
+  background-color: #8FBC8F;
   opacity: 3;
 }
 
-.back {
-background: url(back.jpg) no-repeat center center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover; 
-  
+body {
+  background-color: #8FBC8F;
 }
 
 .feat {
@@ -119,7 +113,7 @@ a.links {
 }
 
 links a:hover {
-color:#575656;
+color: #575656;
 }
 
 
@@ -138,12 +132,12 @@ color:#575656;
   text-align: center;
 }
 
-///////////////// Goals /////////////////////
+///////////////// User_Goals /////////////////////
 
 .goals {
   height: 300px;
   display:table;
-  color: #575656
+  color: #575656;
 }
 .goalhead {
    text-align: center;
@@ -156,10 +150,12 @@ color:#575656;
   padding: 10px;
   height: 350px;
   background-color: #EAEBE7;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .goaltitle {
-  height: 100px;
+  height: 80px;
   font-family: corki;
   font-size: 2em;
   text-align: left;
@@ -169,7 +165,7 @@ color:#575656;
   height: 100px;
 }
 
-//////////////// Users //////////////////////
+//////////////// User_Profile //////////////////////
 
 .username {
   font-family: corki;
@@ -188,6 +184,32 @@ color:#575656;
   height: 180px;
   padding: 10px
 }
+
+/////////////// Goal Show Page //////////////////////
+
+.goalprofpic {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.goalproftitle {
+  font-family: corki;
+  font-size: 2em;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goaldead {
+  font-size: 1.3em;
+}
+
+.goalprofbox {
+  height: 400px;
+  background-color: #EAEBE7;
+}
+
 
 
 
