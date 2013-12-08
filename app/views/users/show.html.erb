@@ -20,6 +20,7 @@
 		<div class="container ">
 			<div class="row">
 				<h2 class="goalhead"> <%= @user.name %>'s Goals</h2>
+				<h5 class="goalnew"> <%= link_to 'New Goal', new_user_goal_path(@user) %> </h5>
 			</div>
 			<div class="row">
 				<% @user.goals.each do |goal| %>
@@ -35,8 +36,10 @@
 								<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
 						</div>
 						
-						<%= link_to 'Edit Goal', edit_goal_path(goal) %>
-
+						<p> <%= link_to 'Edit Goal', edit_goal_path(goal) %> </p>
+						<%= link_to 'Delete Goal', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
+				
 				</div> 
 				<% end %>	
 			</div>

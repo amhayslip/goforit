@@ -56,6 +56,11 @@ section {
   margin-top: 20px;
   }
 
+html {
+  background-color: #8FBC8F; 
+}
+
+
  
 
 
@@ -180,6 +185,11 @@ color: #575656;
   height: 100px;
 }
 
+.goalnew {
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+
 //////////////// User_Profile //////////////////////
 
 .username {
@@ -233,6 +243,10 @@ a {
 
 a:hover {
   color: #575656;
+}
+
+.editgoal {
+  font-size: 1.5em;
 }
 
 //////////////// Steps /////////////////////
@@ -356,7 +370,64 @@ a:hover {
 }    
 
 
+//////////// partners ////////////
 
+
+.partnertitle {
+  font-family: corki;
+  font-size: 2.5em;
+}
+
+.partnersbox {
+  height: 300px;
+  display:table;
+  color: #575656;
+}
+
+.partbox {
+  padding: 10px;
+  background-color: #EAEBE7;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 300px;
+}
+
+.partnamebox {
+  
+}
+
+.partname {
+ font-family: corki;
+  font-size: 2em;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.partemailbox {
+  
+}
+
+.partemail {
+  
+}
+
+.partphonebox {
+  
+}
+
+.partphone {
+  
+}
+
+.partdatebox {
+  
+}
+
+.partdate {
+  
+}
 
 
 
