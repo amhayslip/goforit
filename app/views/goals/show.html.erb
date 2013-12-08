@@ -8,14 +8,9 @@
 <img src="<%= @goal.goal_pic %>">
 
 
-<%= @goal.user.name %>
-
-
-
-
-
 
 <% @goal.partners.each do |partner| %>
 	<%= partner.full_name %>
 <% end %>
 
+<%=link_to 'Back to Profile', new_user_session_path %>
