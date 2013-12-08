@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207193543) do
+ActiveRecord::Schema.define(version: 20131208005001) do
 
   create_table "goals", force: true do |t|
     t.datetime "created_at"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20131207193543) do
     t.date     "deadline"
     t.text     "description"
     t.string   "goal_pic"
+  end
+
+  create_table "partners", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email_address"
+    t.string   "phone_number"
+    t.integer  "goal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "frequency"
   end
 
   create_table "roles", force: true do |t|
@@ -48,6 +59,7 @@ ActiveRecord::Schema.define(version: 20131207193543) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "profile_pic"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
