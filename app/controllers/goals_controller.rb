@@ -9,6 +9,7 @@ class GoalsController < ApplicationController
 	
 	def new
 		@goal = Goal.new
+		@goal.user_id = params[:user_id]
 	end
 	
 	# def create
@@ -19,6 +20,8 @@ class GoalsController < ApplicationController
 	
 	def create
 		@goal = Goal.new(goal_params)
+		# Assign user id to new goal
+		@goal.user_id = params[:user_id]
 		@goal.save
 		redirect_to user_path(goal_params[:user_id])
 	end

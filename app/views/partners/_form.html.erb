@@ -9,12 +9,16 @@
 <%= f.label :email_address %>
 <%= f.text_field :email_address %> <br />
 
-<%= f.label :phone_number %>
-<%= f.text_field :phone_number %> <br />
+<%= f.label :phone_number %> *
+<%= f.text_field :phone_number %><br />
+
+<%= f.label :frequency %>
+<%= f.text_field :frequency %> <br />
 
 <%= f.label :goal_id %>
-<%= f.text_field :goal_id %> <br />
+<%= select("partner", "goal_id", @goals.collect {|p| [ p.title, p.id ]}, {include_blank: 'None'}) %><br />
 
-
-<%= f.submit %>
+<%= f.submit %><br />
+<p>* Required</p>
 <% end %>
+

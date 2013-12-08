@@ -3,7 +3,6 @@ class Partner < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :goal
 
-	validates :email_address, uniqueness: true
 	validates :goal_id, presence: true
 
 	def full_name
