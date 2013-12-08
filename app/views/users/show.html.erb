@@ -1,48 +1,45 @@
 
 
-<article class="container usershow">
-    <div class="row">
-       
-        <div class="col-lg-12">
-        	<div class="userinfo"
-				  <h1 class="username"> <span class="username"> <%= @user.name %> </span></h1>
-		          <p class="email"> <span class="email"> Email: <%= @user.email if @user.email %> </span> </p>
+	<article class="container usershow">
+	    <div class="row">
+	    	<div class="col-lg-3">
+	    		User Pic
+	    	</div>
+	        <div class="col-lg-3">
+	        	<div class="userinfo"
+					  <h1 class="username"> <span class="username"> <%= @user.name %> </span></h1>
+			          <p class="email"> <span class="email"> Email: <%= @user.email if @user.email %> </span> </p>
+		        </div>
 	        </div>
-        </div>
-        <div class="col-sm-0">
-        </div>
-    </div>
-</article>
+			<div class="col-log-6">
+			</div>
 
-<article class="container featured users">
-	<div class="row">
-		<h2 class="goalhead">Goals</h2>
-	</div>
-	<div class="row">
-		<% @user.goals.each do |goal| %>
-		<div class="col-sm-3 goals">
-				<div class="goalbox">
-					<div class="goaltitle"
-						<h2><%= link_to goal.title, goal_path(goal) %>  </h2>
+	    </div>
+	</article>
+
+		<div class="container ">
+			<div class="row">
+				<h2 class="goalhead"> <%= @user.name %>'s Goals</h2>
+			</div>
+			<div class="row">
+				<% @user.goals.each do |goal| %>
+				<div class="col-sm-3 goals">
+						<div class="goalbox">
+							<div class="goaltitle"
+								<h2><%= link_to goal.title, goal_path(goal) %>  </h2>
+							</div>
+							<div class="goaldes"
+								<p class="des"> <%= goal.description %> </p>
+								<p> Deadline: <%= goal.deadline %> </p>
+							</div>
+								<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
+						</div>
 						
+						<%= link_to 'Edit Goal', edit_goal_path(goal) %>
 
-					</div>
-					<div class="goaldes"
-						<p class="des"> <%= goal.description %> </p>
-						<p> Deadline: <%= goal.deadline %> </p>
-					</div>
-						<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
-						
-				</div>
-				<%= link_to 'Edit Goal', edit_goal_path(goal) %>
-		</div> 
-		<% end %>	
-	</div>
-		
-</article>
-
-
-<%= link_to "Edit Profile", edit_user_path %>
-<%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+				</div> 
+				<% end %>	
+			</div>
+		</div>
 
 

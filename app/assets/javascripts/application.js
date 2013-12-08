@@ -15,3 +15,47 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+
+$(document).ready(function() {
+    $('.pull-me1').mouseenter(function() {
+    $('.panel1').slideToggle('slow');
+    });
+});
+
+
+$(document).ready(function() {
+    $('.pull-me2').mouseenter(function() {
+    $('.panel2').slideToggle('slow');
+    });
+});
+
+$(document).ready(function() {
+    $('.pull-me3').mouseenter(function() {
+    $('.panel3').slideToggle('slow');
+    });
+});
+
+
+$(document).ready(function() {
+    $('.pull-me4').mouseenter(function() {
+    $('.panel4').slideToggle('slow');
+    });
+});
+// $(function() {
+//       var pull     = $('#pull');
+//         menu  = $('nav ul');
+//         menuHeight  = menu.height();
+
+//       $(pull).on('click', function(e) {
+//         e.preventDefault();
+//         menu.slideToggle();
+//       });
+
+//       $(window).resize(function(){
+//             var w = $(window).width();
+//             if(w > 320 && menu.is(':hidden')) {
+//               menu.removeAttr('style');
+//             }
+//         });
+//     });
