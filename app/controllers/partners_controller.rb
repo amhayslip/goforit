@@ -11,7 +11,11 @@ class PartnersController < ApplicationController
 	def create
 		@partner = Partner.new(partner_params)
 		@partner.save
-		redirect_to root_path
+		if @partner.save
+			redirect_to partners_path, :notice => "Partner created."
+		else
+			redirect_to partners_path, :notice => "Unable to create new partner."
+		end
 	end
 
 	def edit
@@ -21,17 +25,21 @@ class PartnersController < ApplicationController
 	def update
 		@partner = Partner.find(params[:id])
 		@partner.update(partner_params)
-		redirect_to root_path
+		if @partner
+		  redirect_to partners_path, :notice => "Partner updated."
+		else
+		  redirect_to partners_path, :alert => "Unable to update partner."
+		end
 	end
 
 	def destroy
 		@partner = Partner.find(params[:id])
 		@partner.destroy
-		redirect_to root_path
+		redirect_to partners_path
 	end
 
 private
 	def partner_params
-		params.require(:partner).permit(:first_name, :last_name, :email_address, :phone_number, :goal_id)
+		params.require(:partner).permit(:first_name, :last_name, :email_address, :phone_number, :goal_id, :frequency)
 	end
 end

@@ -9,3 +9,6 @@
 	<%= goal.deadline %>
 	<%= goal.user_id %>
 <% end %>
+
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
