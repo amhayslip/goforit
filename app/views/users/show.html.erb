@@ -41,6 +41,9 @@
 						<p> <%= link_to 'Edit Goal', edit_goal_path(goal) %> </p>
 						<%= link_to 'Delete Goal', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       
+      <% @user.partners.each do |partner| %>
+      <%= partner.first_name %>
+      <% end %>
 				
 				</div> 
 				<% end %>	

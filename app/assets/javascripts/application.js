@@ -24,6 +24,15 @@ $(document).ready(function() {
 });
 
 
+// var slide = function () {
+//     $('.panel').slideToggle('slow');
+// }
+
+// $('.pull-me').on(mouseenter, slide());
+
+
+
+
 $(document).ready(function() {
     $('.pull-me2').mouseenter(function() {
     $('.panel2').slideToggle('slow');
