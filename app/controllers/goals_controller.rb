@@ -8,26 +8,17 @@ class GoalsController < ApplicationController
 	end
 	
 	def new
-		@goal = Goal.new
-		@goal.user_id = params[:user_id]
+		@user = User.find(params[:user_id])
+		@goal = @user.goals.new
 	end
 	
-	# def create
-	# 	@goal = Goal.new(goal_params)
-	# 	@goal.save
-	# 	redirect_to root_path
-	# end
 	
 	def create
-		@goal = Goal.new(goal_params)
-		# Assign user id to new goal
-		user = User.find(@goal.user_id)
-		@goal.user_id = params[:user_id]
+		@user = User.find(params[:user_id])
+		@goal = @user.goals.new(goal_params)
 		@goal.save
-		redirect_to user_path(user.id)
+		redirect_to current_user
 	end
-
-
 
 	def edit
 		@goal = Goal.find(params[:id])
