@@ -6,7 +6,6 @@ Goforit::Application.routes.draw do
   	resources :goals, :partners
   end
   
-  resources :goals
-  resources :partners
+
 
 end
