@@ -316,6 +316,7 @@ a:hover {
 .slide a:hover{
     cursor:pointer;
     color: #8FBC8F;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .panel1 {
     margin-top: 0px;
@@ -370,17 +371,15 @@ a:hover {
     position:relative;
     right:-25px;
     width:150px;
-    height:34px;
-  font-family:"'Italiana'",sans-serif;
-    font-size:30px;
+    height:100px;
+  font-family:'Italiana',sans-serif;
+    font-size:2em;
+    line-height: 1.15em;
   color:#575656;
   text-decoration:none;
-    
-
+  text-align:center;
 }
-.pull-me p {
-    text-align:center;
-}    
+ 
 
 
 //////////// partners ////////////
