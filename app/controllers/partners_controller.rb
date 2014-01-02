@@ -23,9 +23,9 @@ class PartnersController < ApplicationController
 		partner_phone_number = @partner.phone_number
 		twilio_send_text("Welcome to GoForIt! Thank you for being an accountability partner, #{@partner.first_name}.", partner_phone_number)
 		if @partner.save
-			redirect_to user_partners_path(:user_id), :notice => "Partner created."
+			redirect_to user_partners_path, :notice => "Partner created."
 		else
-			redirect_to user_partners_path(:user_id), :notice => "Unable to create new partner."
+			redirect_to user_partners_path, :notice => "Unable to create new partner."
 		end
 	end
 
