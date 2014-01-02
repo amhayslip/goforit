@@ -1,4 +1,4 @@
-<%= form_for @partner, :url => user_partners_path do |f| %>
+<%= form_for [@user, @partner], :url => user_partners_path do |f| %>
 
 <%= f.label :first_name %>
 <%= f.text_field :first_name %> <br />

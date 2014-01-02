@@ -15,6 +15,8 @@ class PartnersController < ApplicationController
 	def new
 		@partner = Partner.new
 		@goals = Goal.all
+		@user = User.find(params[:user_id])
+
 	end
 
 	def create
@@ -38,9 +40,9 @@ class PartnersController < ApplicationController
 		@partner = Partner.find(params[:id])
 		@partner.update(partner_params)
 		if @partner
-		  redirect_to user_partners_path(:user_id), :notice => "Partner updated."
+		  redirect_to user_partners_path, :notice => "Partner updated."
 		else
-		  redirect_to user_partners_path(:user_id), :alert => "Unable to update partner."
+		  redirect_to user_partners_path, :alert => "Unable to update partner."
 		end
 	end
 
@@ -63,6 +65,6 @@ class PartnersController < ApplicationController
 
 private
 	def partner_params
-		params.require(:partner).permit(:first_name, :last_name, :email_address, :phone_number, :goal_id, :frequency)
+		params.require(:partner).permit(:first_name, :last_name, :email_address, :phone_number, :goal_id, :frequency, :user_id)
 	end
 end
