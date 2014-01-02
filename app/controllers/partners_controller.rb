@@ -49,7 +49,7 @@ class PartnersController < ApplicationController
 	def destroy
 		@partner = Partner.find(params[:id])
 		@partner.destroy
-		redirect_to user_partners_path(:user_id)
+		redirect_to user_partners_path
 	end
 
   def twilio_send_text(body, to)

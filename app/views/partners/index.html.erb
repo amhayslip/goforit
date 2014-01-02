@@ -25,7 +25,7 @@
 
 					</div>
 					<p> <%= link_to 'Edit Partner', edit_user_partner_path(@user, partner) %> </p>
-					<%= link_to 'Delete Partner', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					<%= link_to 'Delete Partner', user_partner_path(@user, partner), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				</div>	
 			<% end %>
 			</div>
