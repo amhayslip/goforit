@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207173454) do
+ActiveRecord::Schema.define(version: 20131217181538) do
+
+  create_table "goals", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "title"
+    t.date     "deadline"
+    t.text     "description"
+    t.string   "goal_pic"
+  end
+
+  create_table "partners", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email_address"
+    t.string   "phone_number"
+    t.integer  "goal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "frequency"
+    t.integer  "user_id"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -38,6 +60,10 @@ ActiveRecord::Schema.define(version: 20131207173454) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "profile_pic"
+    t.string   "location"
+    t.string   "website_url"
+    t.text     "description"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

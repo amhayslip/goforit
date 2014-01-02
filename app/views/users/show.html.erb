@@ -1,3 +1,63 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+
+	<article class="container usershow">
+	    <div class="row">
+	    	<div class="col-lg-3">
+	    		
+	    		<img src="<%= @user.profile_pic %>">
+	    	</div>
+	        <div class="col-lg-3">
+	        	<div class="userinfo"
+					  <h1 class="username"> <span class="username"> <%= @user.name %> </span></h1>
+			          <p class="email"> <span class="email"> Email: <%= @user.email if @user.email %> </span> </p>
+		        </div>
+	        </div>
+			<div class="col-log-6">
+			</div>
+
+	    </div>
+	</article>
+
+		<div class="container ">
+			<div class="row">
+				<h2 class="goalhead"> <%= @user.name %>'s Goals</h2>
+				<h5 class="goalnew"> <%= link_to 'New Goal', new_user_goal_path(@user) %> </h5>
+				<h5 class="goalnew"> <%= link_to 'View All Partners', user_partners_path(@user) %> </h5>
+
+			</div>
+			<div class="row">
+				<% @user.goals.each do |goal| %>
+				<div class="col-sm-3 goals">
+						<div class="goalbox">
+							<div class="goaltitle"
+								<h2><%= link_to goal.title, user_goal_path(@user, goal.id) %>  </h2>
+							</div>
+						
+							 
+
+							<div class="goaldes"
+								<p class="des"> <%= goal.description %> </p>
+								<p> Deadline: <%= goal.deadline %> </p>
+							</div>
+								<img class="goalpic" src="<%= goal.goal_pic %>" width="150px">
+							
+
+							<div>
+								<span class="partners">Partners:</span>
+								<% @user.partners.each do |partner| %>
+							  <%= partner.first_name %>
+							  <% end %>
+							</div> 
+					 
+							</div>
+						
+						<p> <%= link_to 'Edit Goal', edit_user_goal_path(@user, goal.id) %> </p>
+						<%= link_to 'Delete Goal', user_goal_path(@user, goal.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					
+      
+    
+				
+				</div> 
+				<% end %>	
+			</div>
+		</div>
+

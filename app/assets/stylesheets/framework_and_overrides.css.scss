@@ -1,3 +1,16 @@
+////////  #EAEBE7 off-white ///////////
+//////// #575656 dark-grey /////////
+//////// #8F969C light-grey /////////
+////////#8FBC8F  mint green ////////////
+
+
+
+
+
+
+
+
+
 // import the CSS framework
 @import "bootstrap";
 
@@ -34,7 +47,6 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
@@ -43,3 +55,414 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+html {
+  background-color: #8FBC8F; 
+}
+
+
+ 
+
+
+
+
+
+//////////////// Nav Styles //////////////////////
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #575656;
+}
+
+.navbar-inverse {
+  border-color: white;
+}
+
+
+
+
+
+//////////////// Body Styles /////////////////////
+
+.logo {
+ text-align: center;
+ font-family: corki;
+ font-size: 2.5em;
+ color: white;
+ text-decoration: none;
+}
+.logo a:link {
+color: #575656;
+}
+.logo a:visited {
+color: #575656;
+}
+.logo a:active {
+color: #575656;
+}
+.logo a:hover {
+color:#759B84;
+}
+
+
+.tagline {
+  margin-top: -13px;
+  text-align: center;
+  font-family: corki;
+  color: #575656;
+}
+
+.navback {
+  background-color: #8FBC8F;
+  opacity: 3;
+}
+
+body {
+  background: url(back.jpg) no-repeat center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+.feat {
+  color: #575656
+}
+
+a.links {
+  color: #759B84;
+}
+
+links a:hover {
+color: #575656;
+}
+
+
+.hm {
+  border: 1px solid black;
+}
+
+.mission {
+  background-color: #EAEBE7;
+  margin-top: 150px;
+}
+
+.statement {
+  font-family: corki;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+///////////////// User_Goals /////////////////////
+
+.goals {
+  height: 300px;
+  display:table;
+  color: #575656;
+}
+.goalhead {
+   text-align: left;
+  font-size: 3em;
+  font-family: corki;
+  margin-left: 5px;
+}
+
+.goalbox {
+  padding: 10px;
+  height: 350px;
+  background-color: #EAEBE7;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.goaltitle {
+  height: 80px;
+  font-family: corki;
+  font-size: 2em;
+  text-align: left;
+}
+
+.goaldes {
+  height: 100px;
+}
+
+.goalnew {
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+
+//////////////// User_Profile //////////////////////
+
+.username {
+  font-family: corki;
+  text-align: left;
+  font-size: 1.9em;
+}
+
+.email {
+  text-align: left;
+  font-size: 1.2em;
+  font-family: corki
+}
+
+.userinfo {
+  background-color: none;
+  height: 180px;
+  padding: 10px;
+   -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/////////////// Goal Show Page //////////////////////
+
+.goalprofpic {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.goalproftitle {
+  font-family: corki;
+  font-size: 2em;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goaldead {
+  font-size: 1.3em;
+}
+
+.goalprofbox {
+  height: 400px;
+  background-color: #EAEBE7;
+}
+
+a {
+  color: #8FBC8F
+}
+
+a:hover {
+  color: #575656;
+}
+
+.editgoal {
+  font-size: 1.5em;
+}
+
+//////////////// Steps /////////////////////
+
+
+.stepboxbig {
+  margin-top: 150px;
+}
+
+.steptitlebox {
+  color: #575656; 
+}
+
+.steptitle {
+  font-family: corki;
+  color: #575656;
+  background-color: #EAEBE7;
+
+}
+
+.stepbox {
+  height: 240px;
+  background-color: #8FBC8F;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+
+.big {
+  background-color: #EAEBE7;
+}
+
+.stepparbox {
+  background-color: #8FBC8F;
+}
+
+.steppar {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+
+
+/////// Step JS //////////
+
+.about {
+    margin: 0 auto;
+    padding:0;
+    width:200px;
+    text-align:center;
+}
+
+.slide a:hover{
+    cursor:pointer;
+    color: #8FBC8F;
+}
+.panel1 {
+    margin-top: 0px;
+    background-size:90% 90%;
+    height:200px;
+    display:none;
+    font-family:garamond,times-new-roman,serif;
+}
+
+.panel2 {
+    margin-top: 0px;
+    background-size:90% 90%;
+    height:200px;
+    display:none;
+    font-family:garamond,times-new-roman,serif;
+}
+
+.panel3 {
+    margin-top: 0px;
+    background-size:90% 90%;
+    height:200px;
+    display:none;
+    font-family:garamond,times-new-roman,serif;
+}
+
+.panel4 {
+    margin-top: 0px;
+    background-size:90% 90%;
+    height:200px;
+    display:none;
+    font-family:garamond,times-new-roman,serif;
+}
+
+
+
+.panel p{
+    text-align: left;
+}
+.slide {
+  margin-left: auto;
+  margin-right: auto;
+  padding:0;
+  border-top: 2px #575656;
+  margin-top: 50px;
+  background-color: #EAEBE7; 
+  width: 200px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.pull-me1, .pull-me2, .pull-me3, .pull-me4 {
+  display:block;
+    position:relative;
+    right:-25px;
+    width:150px;
+    height:34px;
+  font-family:"corki",sans-serif;
+    font-size:30px;
+  color:#575656;
+  text-decoration:none;
+    
+
+}
+.pull-me p {
+    text-align:center;
+}    
+
+
+//////////// partners ////////////
+
+
+.partnertitle {
+  font-family: corki;
+  font-size: 2.5em;
+}
+
+.partnersbox {
+  height: 300px;
+  display:table;
+  color: #575656;
+}
+
+.partbox {
+  padding: 10px;
+  background-color: #EAEBE7;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 300px;
+}
+
+.partnamebox {
+  
+}
+
+.partname {
+ font-family: corki;
+  font-size: 2em;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.partemailbox {
+  
+}
+
+.partemail {
+  
+}
+
+.partphonebox {
+  
+}
+
+.partphone {
+  
+}
+
+.partdatebox {
+  
+}
+
+.partdate {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

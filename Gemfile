@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+
+gem 'twilio-ruby'
+gem 'figaro'
+
+gem 'hirb'
 gem 'rails', '4.0.1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
@@ -29,7 +34,11 @@ group :production do
   gem 'unicorn'
 end
 group :test do
-  gem 'capybara'
+  # gem 'capybara'
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'
+  # gem 'database_cleaner', '1.0.1'
+  # gem 'email_spec'
 end
+
+gem 'hirb'

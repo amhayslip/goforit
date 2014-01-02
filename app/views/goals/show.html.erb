@@ -1,0 +1,38 @@
+<!-- users/8/goals/1 -->
+
+ <article class="container logobox">
+     
+     	 
+     	  <div class="col-sm-12">
+     	  		<h3 class="goalproftitle"> <%= @goal.title %> </h1>
+     	  </div>
+    <div class="goalprofbox">
+     	  <div class="col-sm-0">
+          </div>
+          <div class="col-sm-6">
+          		<img class="goalprofpic" src="<%= @goal.goal_pic %>" width="350px" >
+          </div>
+          <div class="col-sm-6">
+          		<p class="goaldead"> Goal Deadline: <%= @goal.deadline %> </p>
+          		<p class="goaldead"> <%= @goal.description %> </p>
+          		<h4>Partners: </h4><% @goal.partners.each do |partner| %>
+					<p class="goaldead"><%= partner.full_name%> </p>
+				<% end %>
+		 <div class="col-sm-0">
+         </div>
+    </div>
+
+          		
+  </div>
+
+
+<p class="editgoal"> <%= link_to 'Edit Goal', edit_goal_path(params[:id]) %> | <%= link_to 'Add Partner', new_partner_path %> </p>
+
+
+</article>
+
+
+
+
+
+
