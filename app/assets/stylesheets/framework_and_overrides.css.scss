@@ -218,6 +218,13 @@ color: #575656;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  max-height: 300px;
+  width: auto;
+}
+
+.goalpic {
+  max-height: 140px;
+  width: auto;
 }
 
 .goalproftitle {
@@ -238,11 +245,12 @@ color: #575656;
 }
 
 a {
-  color: #8FBC8F
+  color: #575656;
 }
 
 a:hover {
-  color: #575656;
+  color: #8FBC8F;
+  text-decoration: none;
 }
 
 .editgoal {
