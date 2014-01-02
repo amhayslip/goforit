@@ -5,14 +5,19 @@
 
 
 
-
-
-
-
-
-
 // import the CSS framework
 @import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Italiana|Open+Sans+Condensed:300);
+
+/*---------Fonts------*/
+h1, h2, h3, h4, h5, a  {
+  font-family: 'Italiana', serif;
+}
+
+body, p {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 
 // make all images responsive by default
 img {
@@ -85,7 +90,7 @@ html {
 
 .logo {
  text-align: center;
- font-family: corki;
+ font-family: 'Italiana';
  font-size: 2.5em;
  color: white;
  text-decoration: none;
@@ -107,7 +112,7 @@ color:#759B84;
 .tagline {
   margin-top: -13px;
   text-align: center;
-  font-family: corki;
+  font-family: 'Italiana';
   color: #575656;
 }
 
@@ -147,7 +152,7 @@ color: #575656;
 }
 
 .statement {
-  font-family: corki;
+  font-family: 'Italiana';
   font-size: 2.5em;
   text-align: center;
 }
@@ -162,7 +167,7 @@ color: #575656;
 .goalhead {
    text-align: left;
   font-size: 3em;
-  font-family: corki;
+  font-family: 'Italiana';
   margin-left: 5px;
 }
 
@@ -176,7 +181,7 @@ color: #575656;
 
 .goaltitle {
   height: 80px;
-  font-family: corki;
+  font-family: 'Italiana';
   font-size: 2em;
   text-align: left;
 }
@@ -193,7 +198,7 @@ color: #575656;
 //////////////// User_Profile //////////////////////
 
 .username {
-  font-family: corki;
+  font-family: 'Italiana';
   text-align: left;
   font-size: 1.9em;
 }
@@ -201,7 +206,7 @@ color: #575656;
 .email {
   text-align: left;
   font-size: 1.2em;
-  font-family: corki
+  font-family: 'Italiana'
 }
 
 .userinfo {
@@ -228,7 +233,7 @@ color: #575656;
 }
 
 .goalproftitle {
-  font-family: corki;
+  font-family: 'Italiana';
   font-size: 2em;
   width: 83%;
   margin-left: auto;
@@ -269,7 +274,7 @@ a:hover {
 }
 
 .steptitle {
-  font-family: corki;
+  font-family: 'Italiana';
   color: #575656;
   background-color: #EAEBE7;
 
@@ -366,7 +371,7 @@ a:hover {
     right:-25px;
     width:150px;
     height:34px;
-  font-family:"corki",sans-serif;
+  font-family:"'Italiana'",sans-serif;
     font-size:30px;
   color:#575656;
   text-decoration:none;
@@ -382,7 +387,7 @@ a:hover {
 
 
 .partnertitle {
-  font-family: corki;
+  font-family: 'Italiana';
   font-size: 2.5em;
 }
 
@@ -405,7 +410,7 @@ a:hover {
 }
 
 .partname {
- font-family: corki;
+ font-family: 'Italiana';
   font-size: 2em;
   width: 83%;
   margin-left: auto;
